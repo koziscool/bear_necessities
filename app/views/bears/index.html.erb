@@ -1,0 +1,11 @@
+<h4>bears<h4>
+
+<%= link_to "new bear!", new_bear_path  %>
+
+
+<% @bears.each do |bear| %>
+<p><%= link_to bear.name, bear %></p>
+<%= link_to "Edit", edit_bear_path(bear) %>
+<%= link_to "Delete", bear, method: :delete %>
+<% end %>
+
